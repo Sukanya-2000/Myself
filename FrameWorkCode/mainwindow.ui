@@ -229,6 +229,11 @@ p, li { white-space: pre-wrap; }
    <addaction name="actionSave_As"/>
    <addaction name="actionLoadData"/>
    <addaction name="separator"/>
+   <addaction name="actionBold"/>
+   <addaction name="separator"/>
+   <addaction name="actionSubscript"/>
+   <addaction name="actionSuperscript"/>
+   <addaction name="separator"/>
    <addaction name="actionSpell_Check"/>
    <addaction name="separator"/>
    <addaction name="actionLoad_Prev_Page"/>
