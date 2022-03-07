@@ -114,6 +114,18 @@ If you use this framework or learn from our publications, please cite our papers
   year={2018},
   pages={143--161}
 }
+
+#  Bold :
+
+Text-Editor -> add New -> Qt -> Qt Resource File (Choose) -> Name (AppResources) & Location (inside Text-Editor) (Next) -> Finish.
+
+In the appresources.qrc file in "Resources", add a prefix \Images and add a file (bold.png) inside Images. "Edit action" of "Bold Action" -> Icon (select)
+
+Right Click the action -> "Go to Slot" -> Triggered (bool) (Ok). Function "on_actionBold_triggered(bool checked)" is created in "mytexteditor.cpp" . Add this line inside the function.
+
+ checked ? ui->textEdit->setFontWeight(QFont::Bold) : ui->textEdit->setFontWeight(QFont::Normal);
+
+
 ```
 # References:
 1. We started the code (and used icons) from: https://www.youtube.com/watch?v=x858_WCtl_Y
