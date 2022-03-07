@@ -195,6 +195,40 @@ void MainWindow::on_actionCreateBest2OCR_triggered()
     }
     best2 << endl;
 }
+void MainWindow::on_actionBold_triggered()
+{
+    QFont font = ui -> textEdit -> currentFont();
+    font.bold() == true ? font.setBold(false) : font.setBold(true);
+    ui -> textEdit -> setCurrentFont(font);
+}
+
+void MainWindow::on_actionSuperscript_triggered()
+{
+    Subscript -> setChecked(false);
+    QTextCharFormat format;
+
+    if(Superscript -> isChecked())
+        format.setVerticalAlignment(QTextCharFormat::AlignSuperScript);
+    else
+        format.setVerticalAlignment(QTextCharFormat::AlignNormal);
+
+    ui -> textEdit -> mergeCurrentCharFormat(format);
+}
+
+
+
+void MainWindow::on_actionSubscript_triggered()
+{
+    Superscript -> setChecked(false);
+        QTextCharFormat format;
+
+        if(Subscript -> isChecked())
+            format.setVerticalAlignment(QTextCharFormat::AlignSubScript);
+        else
+            format.setVerticalAlignment(QTextCharFormat::AlignNormal);
+
+        ui -> textEdit -> mergeCurrentCharFormat(format);
+}
 
 
 void MainWindow::on_actionOpen_triggered()
